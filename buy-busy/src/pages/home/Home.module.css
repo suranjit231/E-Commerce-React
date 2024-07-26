@@ -1,0 +1,114 @@
+.homeContainer {
+    width: 100%;
+    min-height: calc(100vh - 50px);
+    padding: 10px;
+    display: grid;
+    gap: 10px; /* Add some space between the boxes */
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Ensure boxes are equal width */
+    justify-items: stretch; /* Ensure boxes stretch to fill the grid cell */
+}
+
+.productBox {
+    height: 220px;
+    box-sizing: border-box;
+    box-shadow: 0 4px 8px rgba(0, 255, 0, 0.5);
+    border-radius: 5px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 5px;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.productBox:hover{
+    transform: translateY(-2px);
+}
+
+.imageBox{
+    height: 60%;
+    /* border: 1px solid red; */
+    position: relative;
+    flex: 1;
+    z-index: -1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 300px; 
+   
+}
+
+.imageBox img{
+    height: 90%;
+    position: absolute;
+    transform: rotateY(0deg);
+    animation: zoom3d 5s linear infinite;
+    transform-style: preserve-3d;
+    background-color: inherit;
+
+}
+
+
+
+@keyframes zoom3d {
+    0% {
+        transform: scale3d(1, 1, 1);
+    }
+    50% {
+        transform: scale3d(1.2, 1.2, 1.2);
+    }
+    100% {
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+.productFooter{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 0;
+    /* border: 1px solid red; */
+    align-content: flex-end;
+    padding: 0 10px;
+}
+
+.productFooter p{
+    color: rgba(11, 212, 21, 0.719);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* .productFooter p:nth-child(1){
+    text-align: center;
+} */
+
+.cartBtnDiv{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cartBtnDiv button{
+    width: 100%;
+    padding: 5px 0;
+    cursor: pointer;
+    border: 1px solid rgba(11, 212, 21, 0.719);
+    outline: none;
+    color: rgba(11, 212, 21, 0.719);
+    background-color: aliceblue;
+    border-radius: 5px;
+    transition: 0.4s ease-in-out;
+}
+
+.cartBtnDiv button:hover{
+    transform: scale(0.9);
+    color: aliceblue;
+    background-color: rgba(11, 212, 21, 0.719);
+    border: 1px solid rgb(5, 0, 15);
+}
+
+.cartBtnDiv button:active{
+    transform: translateY(-2px);
+}

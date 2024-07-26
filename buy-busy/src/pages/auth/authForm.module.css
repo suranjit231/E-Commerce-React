@@ -1,0 +1,109 @@
+.authFormContainer{
+    width: 250px;
+    height: 260px;
+    padding: 12px;
+    position: relative;
+    left: 50%;
+    top: 30px;
+    transform: translateX(-50%);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 255, 0, 0.5);
+   
+}
+
+.authFormContainer form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.authFormContainer form h2{
+    text-align: center;
+    font-size: 20px;
+    color: rgba(11, 212, 21, 0.719);
+    font-weight: 600;
+    font-style: italic;
+}
+
+.authFormBox{
+    width: 100%;
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.formControlDiv{
+    width: 100%;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+
+}
+
+.formControlDiv input{
+    flex: 1;
+    padding: 5px 10px;
+    border: none;
+    outline: none;
+    border-bottom: 1.5px solid rgba(11, 212, 21, 0.719);
+}
+
+.formControlDiv i{
+    color: rgba(11, 212, 21, 0.719);
+    font-size: 15px;
+    cursor: pointer;
+}
+
+
+.formControlBtnDiv{
+    width: 100%;
+    /* border: 1px solid red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.formControlBtnDiv button{
+    width: 60%;
+    padding: 5px 12px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background-color: aliceblue;
+    color: rgba(11, 212, 21, 0.719);
+    font-size: 15px;
+    font-weight: 600;
+    border: 1px solid rgba(11, 212, 21, 0.719);
+    border-radius: 4px;
+    transition: 0.4s ease-in-out;
+}
+
+.formControlBtnDiv button:hover{
+    color: aliceblue;
+    background-color: rgba(11, 212, 21, 0.719);
+    border: 1.2px solid grey;
+    transform: scale(0.9);
+}
+
+.formControlBtnDiv button:active{
+    transform: translateY(-2px);
+}
+
+.redirectAuthDiv{
+    color: gray;
+    font-size: 12px;
+    font-weight: 500;
+    margin-top: 12px;
+}
+
+.redirectAuthDiv span{
+    margin-left: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    color: rgba(11, 212, 21, 0.719);
+    cursor: pointer;
+}
